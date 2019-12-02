@@ -13,11 +13,10 @@ typedef struct SDL_Instance
     SDL_Renderer *renderer;
 } SDL_Instance;
 
-/**/
+/*main.c*/
 
 int init_instance(SDL_Instance *);
-
-/**/
 void draw_stuff(SDL_Instance instance);
+int pool_even();
 
 #endif

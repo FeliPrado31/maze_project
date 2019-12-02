@@ -15,8 +15,13 @@ int main(void)
     {
         SDL_SetRenderDrawColor(instance.renderer, 0, 0, 0, 0);
         SDL_RenderClear(instance.renderer);
+        if (pool_even() == 1)
+            break;
         draw_stuff(instance);
         SDL_RenderPresent(instance.renderer);
     }
+    SDL_DestroyRenderer(instance.renderer);
+    SDL_DestroyWindow(instance.window);
+    SDL_Quit();
     return (0);
 }
