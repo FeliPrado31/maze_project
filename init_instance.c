@@ -5,7 +5,7 @@ int pool_even()
     SDL_Event event;
     SDL_KeyboardEvent key;
 
-    while (event.type)
+    while (SDL_PollEvent(&event))
     {
         switch (event.type)
         {
@@ -40,7 +40,7 @@ int init_instance(SDL_Instance *instance)
         return (1);
     }
     /*Create a new Window instance*/
-    window = SDL_CreateWindow("SDL2 \\o/", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 500, 500, 0);
+    window = SDL_CreateWindow("EquipoAlfaBuenaMaravillaOndaDinamitaEscuadronLobo", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 500, 500, 0);
     if (window == NULL)
     {
         fprintf(stderr, "SDL_CreateWindow Error: %s\n", SDL_GetError());
